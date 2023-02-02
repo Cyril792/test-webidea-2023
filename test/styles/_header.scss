@@ -1,0 +1,146 @@
+.header {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/app/themes/test/asset/img/header.png");
+  background-size: cover;
+  background-position: right;
+ 
+
+   
+
+  h1 {
+    font-family: $font-light;
+    font-size: 64px;
+    @media screen and (max-width: 1000px){
+          
+    font-size: 46px;
+    }
+    @media screen and (max-width: 750px) {
+      white-space: normal;
+      font-size: 35px;
+    }
+
+  }
+  .titre,
+    .defiler {
+      margin-left: 10%;
+    }
+  
+    .titre {
+      position: absolute;
+      top: 200px;
+      color: $blanc;
+      grid-column: 1/6;
+      width: 50%;
+
+      @media screen and (max-width: 1000px){
+          
+        top : 100px;
+        }
+      @media screen and (max-width: 750px){
+        width: 80%;
+        top: 100px;
+        
+    }
+      
+  
+      .gras {
+        font-family: $font-bold;
+        white-space: nowrap;
+        font-size: 64px;
+        margin-bottom: 25px;
+        @media screen and (max-width: 750px) {
+          white-space: normal;
+          font-size: 15px;
+        }
+        @media screen and (max-width: 1000px){
+          font-size: 35px;
+    
+      }
+      }
+  
+      p {
+        
+        font-family: $font-light;
+        font-size: 20px;
+      
+      @media screen and (max-width: 1000px){
+        font-size: 15px;
+  
+    } }
+    }
+  
+    .defiler {
+      position: absolute;
+      bottom:   120px;
+      transform: rotate(-90deg);;
+      transform-origin: 0 0;
+      width: fit-content;
+      color: $blanc;
+      font-family: $font-light;
+      
+      @media screen and (max-width: 1000px){
+          
+        bottom: 60px;
+        
+      }
+      @media screen and (max-width: 750px){
+        bottom: 60px;
+    }
+  
+      &:hover {
+        cursor: pointer;
+  
+        span {
+          &::after, &::before {
+            background-color: $blanc;
+          }
+        }
+      }
+  
+      
+  
+      span {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: $blanc;
+        left: -40px;
+        transform: translateY(-10px);
+  
+        &::after{
+        content: "";
+        position: absolute;
+        background-color: transparent;
+        width: 10px;
+        height: 2px;
+        transform: rotate(45deg) translate(20%, 3px);
+        transition: 1s;
+        
+        }
+  
+        &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        background-color: transparent;
+        transform: rotate(-45deg) translate(20%, -3px);
+        transition: 1s;
+  
+  
+        }
+  
+      }
+  
+      p {
+        @media screen and (max-width: 1000px){
+        font-size: 15px;
+        }
+        }
+    }
+
+}
